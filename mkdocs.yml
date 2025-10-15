@@ -1,0 +1,60 @@
+site_name: AI Dev Docs
+extra_css:
+    - style/extra.css # CSS 上書き用ファイル
+plugins:
+    - search
+    - gen_nav
+markdown_extensions:
+    - def_list
+    - pymdownx.tasklist:
+          custom_checkbox: true
+    - attr_list
+    - md_in_html
+    - pymdownx.blocks.caption
+    - pymdownx.superfences:
+          custom_fences:
+              - name: mermaid
+                class: mermaid
+                format: !!python/name:pymdownx.superfences.fence_code_format
+    - pymdownx.highlight:
+          anchor_linenums: true
+          line_spans: __span
+          pygments_lang_class: true
+          use_pygments: true # 追加
+    - pymdownx.inlinehilite
+    - pymdownx.snippets
+    - pymdownx.superfences
+    - toc:
+          permalink: true
+    - pymdownx.highlight:
+          anchor_linenums: true
+          line_spans: __span
+          pygments_lang_class: true
+    - pymdownx.superfences
+    - pymdownx.inlinehilite
+    - pymdownx.emoji:
+          emoji_index: !!python/name:material.extensions.emoji.twemoji
+          emoji_generator: !!python/name:material.extensions.emoji.to_svg
+    - admonition
+    - def_list
+    - footnotes
+
+theme:
+    name: material
+    palette:
+        scheme: slate
+        primary: "#3943B5FF"
+        accent: indigo
+
+    features:
+        - search.suggest
+        - header.autohide
+        - navigation.top
+        - content.code.copy
+        # - navigation.tabs
+        # - navigation.instant
+    font:
+        text: "LINE Seed JP App_OTF"
+    language: ja
+    logo: assets/logo.svg
+    favicon: assets/logo.svg
