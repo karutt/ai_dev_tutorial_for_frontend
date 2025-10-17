@@ -1,11 +1,24 @@
 site_name: AI Dev Docs
 extra_css:
-    - style/extra.css # CSS 上書き用ファイル
+    - assets/style/extra.css # CSS 上書き用ファイル
+nav:
+    - Intro: index.md
+    - Dev Overview:
+        - Dev Overview: setup/index.md
+        - アプリの作成: setup/00.md
+        - Github Copilotの使い方:
+            - Github Copilotの使い方: setup/01_github_copilot/index.md
+            - 1. Instructions: setup/01_github_copilot/01.md
+            - 2. Prompts: setup/01_github_copilot/02.md
+            - 3. MCP Server: setup/01_github_copilot/03.md
+        - OpenAPIの定義: setup/02.md
+        - サーバの起動: setup/03.md
 plugins:
     - search
-    - gen_nav
+    - glightbox
+
+    # - gen_nav
 markdown_extensions:
-    - def_list
     - pymdownx.tasklist:
           custom_checkbox: true
     - attr_list
@@ -21,23 +34,21 @@ markdown_extensions:
           line_spans: __span
           pygments_lang_class: true
           use_pygments: true # 追加
-    - pymdownx.inlinehilite
     - pymdownx.snippets
-    - pymdownx.superfences
     - toc:
           permalink: true
     - pymdownx.highlight:
           anchor_linenums: true
           line_spans: __span
           pygments_lang_class: true
-    - pymdownx.superfences
     - pymdownx.inlinehilite
     - pymdownx.emoji:
           emoji_index: !!python/name:material.extensions.emoji.twemoji
           emoji_generator: !!python/name:material.extensions.emoji.to_svg
     - admonition
-    - def_list
     - footnotes
+    - md_in_html
+    - pymdownx.blocks.caption
 
 theme:
     name: material
@@ -51,10 +62,158 @@ theme:
         - header.autohide
         - navigation.top
         - content.code.copy
+        - navigation.instant
+        - navigation.instant.prefetch
+        - navigation.expand
+        - navigation.path
+        - navigation.indexes
         # - navigation.tabs
-        # - navigation.instant
+        - toc.follow
+
+        - content.action.edit
+        - content.action.view
+        - navigation.footer
+        # - toc.integrate
+        # - navigation.sections
+
     font:
-        text: "LINE Seed JP App_OTF"
+        text: "Noto Sans JP"
     language: ja
-    logo: assets/logo.svg
-    favicon: assets/logo.svg
+    logo: assets/img/logo.svg
+    favicon: assets/img/logo.svg
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
