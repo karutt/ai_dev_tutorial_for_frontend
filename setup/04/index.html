@@ -6,10 +6,8 @@
       
       
       
-        <link rel="prev" href="../02/">
+        <link rel="prev" href="../03/">
       
-      
-        <link rel="next" href="../04/">
       
       
       <link rel="icon" href="../../assets/img/logo.svg">
@@ -479,6 +477,29 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    サーバー環境の構築
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -532,9 +553,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#backend-server" class="md-nav__link">
     <span class="md-ellipsis">
-      バックエンドサーバーの環境を整える
+      Backend Serverの環境を作る
     </span>
   </a>
   
@@ -544,29 +565,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../04/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    サーバー環境の構築
-    
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -606,9 +604,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#backend-server" class="md-nav__link">
     <span class="md-ellipsis">
-      バックエンドサーバーの環境を整える
+      Backend Serverの環境を作る
     </span>
   </a>
   
@@ -631,18 +629,18 @@
 
 
 <h1 id="_1">サーバー環境の構築<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
-<h2 id="_2">バックエンドサーバーの環境を整える<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
-<p>前章で作成した OpenAPI をもとに、以下のプロンプトを用いて簡易的なバックエンドサーバーを生成してみましょう。<code>.github/prompts/setup_backend_server.prompt.md</code> を作成し、会話で <code>/setup_backend_server</code> コマンドを実行してください。
-このとき、OpenAPI の内容をコンテキストとして参照できるように、チャット領域へファイルをドラッグ＆ドロップして追加しておくと良いでしょう。</p>
+<h2 id="backend-server">Backend Serverの環境を作る<a class="headerlink" href="#backend-server" title="Permanent link">¶</a></h2>
+<p>前章で作成したOpenAPIを元に、以下のプロンプトを用いて、簡易的なBackendサーバを生成してみましょう。<code>.github/prompts/setup_backend_server.prompt.md</code>を作成し、会話で<code>/setup_backend_server</code>コマンドを実行してください。
+このとき、OpenAPIの内容をコンテキストとして参照できるよう、チャット領域にファイルをドラッグ＆ドロップして追加しておくと良いです。</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/img/be_prompt.png" data-desc-position="bottom"><img alt="" src="../../assets/img/be_prompt.png"></a></p>
-<details class="example">
+<details class="example" open="open">
 <summary>プロンプト内容（.github/prompts/setup_backend_server.prompt.md）</summary>
 <div class="language-markdown highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>---
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="gu">mode: agent</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="gu">---</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>あなたはバックエンド実装支援AIです。以下の固定スタック・出力形式・受け入れ基準に厳密に従って、
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>私が提示する OpenAPI（または仕様）を満たす最小サーバーを生成してください。
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>私が提示する OpenAPI（または仕様）を満たす最小サーバを生成してください。
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
 </span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="gh"># 固定スタック（毎回これで作る）</span>
 </span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
@@ -657,10 +655,10 @@
 </span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>
 </span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="gh"># 期待される成果物（ファイル構成と内容）</span>
 </span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>
-</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="k">-</span><span class="w"> </span>package.json（scripts と依存は下記のとおり）
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="k">-</span><span class="w"> </span>package.json（scriptsと依存は下記のとおり）
 </span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="k">-</span><span class="w"> </span>tsconfig.json（strict / outDir=dist / ES2020 / CommonJS）
 </span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="k">-</span><span class="w"> </span>jest.config.ts（ts-jest / roots=tests / collectCoverageFrom=src/\*<span class="ge">_/_</span>.ts）
-</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="k">-</span><span class="w"> </span>src/server.ts（Express の起動、/healthz、各 API ルートのマウント）
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="k">-</span><span class="w"> </span>src/server.ts（Express起動、/healthz、各APIルートの mount）
 </span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="k">-</span><span class="w"> </span>src/routes/\*\*.ts（各リソースのルーター）
 </span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="k">-</span><span class="w"> </span>src/schemas/\*\*.ts（Zod スキーマ：入力/出力/エラー）
 </span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="k">-</span><span class="w"> </span>tests/\*\*.test.ts（主要エンドポイントの Supertest）
@@ -679,22 +677,22 @@
 </span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>
 </span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a><span class="gh"># 実装ルール</span>
 </span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a>
-</span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a><span class="w">    </span><span class="k">-</span><span class="w"> </span>仕様との契約（型・必須項目・長さ制約・ステータスコード）を <span class="gs">**Zod**</span> を使って厳密に検証する
-</span><span id="__span-0-44"><a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a><span class="w">    </span><span class="k">-</span><span class="w"> </span>400/404/500 を最低限実装し、成功時は 200/201/204 を使い分ける
-</span><span id="__span-0-45"><a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a><span class="w">    </span><span class="k">-</span><span class="w"> </span>エラーの JSON 形は { code: string, message: string, fieldErrors?: {field,msg}[] }
-</span><span id="__span-0-46"><a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a><span class="w">    </span><span class="k">-</span><span class="w"> </span>メモリ DB（Map など）で十分。将来 DB に差し替えやすいよう関数を分割する
-</span><span id="__span-0-47"><a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a><span class="w">    </span><span class="k">-</span><span class="w"> </span>ルートは /api をベースパスに揃える（例: /api/notes）
-</span><span id="__span-0-48"><a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a><span class="w">    </span><span class="k">-</span><span class="w"> </span>CORS は別オリジン想定があれば簡易許可（'\*'）をオプションで記述する
-</span><span id="__span-0-49"><a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a><span class="w">    </span><span class="k">-</span><span class="w"> </span>OpenAPI を渡した場合は「どのエンドポイントがどのハンドラーに対応するか」をコメントで明示する
-</span><span id="__span-0-50"><a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a><span class="w">    </span><span class="k">-</span><span class="w"> </span>curl での検証コマンドを最後に列挙する（成功・失敗パスの双方）
-</span><span id="__span-0-51"><a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a><span class="w">    </span><span class="k">-</span><span class="w"> </span>余計な説明は簡潔にし、**コードを主**に出力する
+</span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a><span class="k">-</span><span class="w"> </span>仕様との契約（型・必須項目・長さ制約・ステータスコード）を <span class="gs">**Zod**</span> を使って厳密検証する
+</span><span id="__span-0-44"><a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a><span class="k">-</span><span class="w"> </span>400/404/500 を最低限実装。成功は 200/201/204 を使い分ける
+</span><span id="__span-0-45"><a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a><span class="k">-</span><span class="w"> </span>エラーの JSON 形は { code: string, message: string, fieldErrors?: {field,msg}[] }
+</span><span id="__span-0-46"><a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a><span class="k">-</span><span class="w"> </span>メモリDB（Map など）で十分。将来DBに差し替えやすい関数分割にする
+</span><span id="__span-0-47"><a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a><span class="k">-</span><span class="w"> </span>ルートは /api をベースパスに揃える（例: /api/notes）
+</span><span id="__span-0-48"><a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a><span class="k">-</span><span class="w"> </span>CORS は別オリジン想定があれば簡易許可（'\*'）をオプションで記述
+</span><span id="__span-0-49"><a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a><span class="k">-</span><span class="w"> </span>OpenAPI を渡した場合は「どのエンドポイントがどの handler に対応するか」をコメントで明示
+</span><span id="__span-0-50"><a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a><span class="k">-</span><span class="w"> </span>curl 検証コマンドを最後に列挙（成功/失敗パスの両方）
+</span><span id="__span-0-51"><a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a><span class="k">-</span><span class="w"> </span>余計な説明は短く。**コードを主**に出力する
 </span><span id="__span-0-52"><a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a>
 </span><span id="__span-0-53"><a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a><span class="gh"># 受け入れ基準（DoD）</span>
 </span><span id="__span-0-54"><a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a>
 </span><span id="__span-0-55"><a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a><span class="k">-</span><span class="w"> </span><span class="sb">`pnpm install`</span> → <span class="sb">`pnpm dev`</span> で起動し、/healthz が 200 を返す
-</span><span id="__span-0-56"><a id="__codelineno-0-56" name="__codelineno-0-56" href="#__codelineno-0-56"></a><span class="k">-</span><span class="w"> </span>主要な CRUD のハッピーパスと 400/404 ケースが Supertest で通る
+</span><span id="__span-0-56"><a id="__codelineno-0-56" name="__codelineno-0-56" href="#__codelineno-0-56"></a><span class="k">-</span><span class="w"> </span>主要な CRUD の happy path と 400/404 が Supertest で通る
 </span><span id="__span-0-57"><a id="__codelineno-0-57" name="__codelineno-0-57" href="#__codelineno-0-57"></a><span class="k">-</span><span class="w"> </span>curl コマンド例で手動確認ができる
-</span><span id="__span-0-58"><a id="__codelineno-0-58" name="__codelineno-0-58" href="#__codelineno-0-58"></a><span class="k">-</span><span class="w"> </span>型エラー・実行時エラーなし（strict 準拠）
+</span><span id="__span-0-58"><a id="__codelineno-0-58" name="__codelineno-0-58" href="#__codelineno-0-58"></a><span class="k">-</span><span class="w"> </span>型エラー/実行時エラーなし（strict 準拠）
 </span><span id="__span-0-59"><a id="__codelineno-0-59" name="__codelineno-0-59" href="#__codelineno-0-59"></a>
 </span><span id="__span-0-60"><a id="__codelineno-0-60" name="__codelineno-0-60" href="#__codelineno-0-60"></a><span class="gh"># ここから対象仕様</span>
 </span><span id="__span-0-61"><a id="__codelineno-0-61" name="__codelineno-0-61" href="#__codelineno-0-61"></a>
@@ -710,21 +708,6 @@
 </span><span id="__span-0-71"><a id="__codelineno-0-71" name="__codelineno-0-71" href="#__codelineno-0-71"></a><span class="w">    </span><span class="k">-</span><span class="w"> </span>ステータス: 200/201/204/400/404/500
 </span></code></pre></div>
 </details>
-<p>実行が完了したら、Node.jsでサーバーを起動できるかどうか確認しましょう。</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">cd</span><span class="w"> </span>backend
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>pnpm<span class="w"> </span>install
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>pnpm<span class="w"> </span>dev
-</span></code></pre></div>
-<p>自分の環境では、localhost:3000でサーバーが起動しました。</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="o">(</span>python3_11<span class="o">)</span><span class="w"> </span>mir:<span class="nv">$pnpm</span><span class="w"> </span>dev
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>&gt;<span class="w"> </span>wordbook-api@1.0.0<span class="w"> </span>dev<span class="w"> </span>/Users/mir/nextjs/todo-spec/dict-app/backend
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>&gt;<span class="w"> </span>ts-node-dev<span class="w"> </span>--respawn<span class="w"> </span>--transpile-only<span class="w"> </span>src/server.ts
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span><span class="m">13</span>:36:00<span class="w"> </span>ts-node-dev<span class="w"> </span>ver.<span class="w"> </span><span class="m">2</span>.0.0<span class="w"> </span><span class="o">(</span>using<span class="w"> </span>ts-node<span class="w"> </span>ver.<span class="w"> </span><span class="m">10</span>.9.2,<span class="w"> </span>typescript<span class="w"> </span>ver.<span class="w"> </span><span class="m">5</span>.9.3<span class="o">)</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>Server<span class="w"> </span>listening<span class="w"> </span>on<span class="w"> </span>port<span class="w"> </span><span class="m">3000</span>
-</span></code></pre></div>
-<p>試しに<code>curl -i http://localhost:3000/healthz</code></p>
 
 
 
@@ -763,7 +746,7 @@
       <nav class="md-footer__inner md-grid" aria-label="フッター">
         
           
-          <a href="../02/" class="md-footer__link md-footer__link--prev" aria-label="前: OpenAPIの定義">
+          <a href="../03/" class="md-footer__link md-footer__link--prev" aria-label="前: サーバー環境の構築">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
@@ -773,27 +756,11 @@
                 前
               </span>
               <div class="md-ellipsis">
-                OpenAPIの定義
-              </div>
-            </div>
-          </a>
-        
-        
-          
-          <a href="../04/" class="md-footer__link md-footer__link--next" aria-label="次: サーバー環境の構築">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                次
-              </span>
-              <div class="md-ellipsis">
                 サーバー環境の構築
               </div>
             </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
-            </div>
           </a>
+        
         
       </nav>
     
