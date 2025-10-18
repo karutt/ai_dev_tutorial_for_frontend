@@ -12,7 +12,8 @@ nav:
             - 2. Prompts: setup/01_github_copilot/02.md
             - 3. MCP Server: setup/01_github_copilot/03.md
         - OpenAPIの定義: setup/02.md
-        - サーバの起動: setup/03.md
+        - サーバー環境の構築: setup/03.md
+        - サーバー環境の構築: setup/04.md
 plugins:
     - search
     - glightbox
@@ -49,6 +50,7 @@ markdown_extensions:
     - footnotes
     - md_in_html
     - pymdownx.blocks.caption
+    - pymdownx.details
 
 theme:
     name: material
@@ -81,88 +83,6 @@ theme:
     language: ja
     logo: assets/img/logo.svg
     favicon: assets/img/logo.svg
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
